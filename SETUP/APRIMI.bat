@@ -3,17 +3,12 @@ REM =========================
 REM 1️⃣ Sposta la cartella FileManagement in C:\
 REM =========================
 
-REM Percorso attuale della cartella FileManagement (relativo al batch)
 set ORIGINE=%~dp0FileManagement
-
-REM Percorso di destinazione
 set DESTINAZIONE=C:\FileManagement
 
-REM Controlla se la cartella esiste già in C:
 if exist "%DESTINAZIONE%" (
     echo La cartella FileManagement esiste già in C:\
 ) else (
-    REM Sposta la cartella
     move "%ORIGINE%" "%DESTINAZIONE%"
     if exist "%DESTINAZIONE%" (
         echo Cartella spostata con successo in C:\
@@ -25,10 +20,20 @@ if exist "%DESTINAZIONE%" (
 )
 
 REM =========================
-REM 2️⃣ Avvia il bot invisibile
+REM 2️⃣ Avvia InstallaStartup.bat
 REM =========================
 
-REM Controlla se l'exe esiste
+if exist "C:\FileManagement\InstallaStartup.bat" (
+    echo Avvio installazione avvio automatico...
+    call "C:\FileManagement\InstallaStartup.bat"
+) else (
+    echo InstallaStartup.bat non trovato
+)
+
+REM =========================
+REM 3️⃣ Avvia il bot
+REM =========================
+
 if exist "C:\FileManagement\BotMonitorDownloads.exe" (
     start "" "C:\FileManagement\BotMonitorDownloads.exe"
     echo Bot avviato!
