@@ -8,7 +8,7 @@ local folder = player.PlayerScripts
     :WaitForChild("Weapon_Local")
     :WaitForChild("Headshots")
 
-local NEW_ID = "rbxassetid://129079209019042"
+local NEW_ID = "rbxassetid://111603843182158" --// HEADSHOT SOUNDID
 
 local count = 0
 
@@ -36,7 +36,7 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
 --// CONFIG
-local CUSTOM_SOUND_ID = "rbxassetid://139219844119994"
+local CUSTOM_SOUND_ID = "rbxassetid://139219844119994" --// SHOOT SOUNDID
 --// POOP                rbxassetid://129079209019042
 --// BOMB TIC            rbxassetid://139692748155280
 --// ERROR               rbxassetid://132281440773764
