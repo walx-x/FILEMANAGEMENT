@@ -30,7 +30,7 @@ print("Total headshot sounds changed:", count)
 --// LocalScript - StarterPlayerScripts
 
 --// CONFIG
-local CUSTOM_SOUND_ID = "rbxassetid://136873378037145" --// SHOOT SOUNDID
+local CUSTOM_SOUND_ID = "rbxassetid://127105730240202" --// SHOOT SOUNDID
 --// POOP                rbxassetid://129079209019042
 --// BOMB TIC            rbxassetid://139692748155280
 --// ERROR               rbxassetid://132281440773764
